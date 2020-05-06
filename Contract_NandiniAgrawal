@@ -1,0 +1,22 @@
+pragma solidity >=0.4.22 <0.7.0;
+
+contract store_message{
+    string[] msgs;
+    uint last_element_index;
+    
+    function push(string memory m) public{
+        msgs.push(m);
+    }
+    
+    function get_index() public view returns (uint){
+        return msgs.length-1;
+    }
+    
+    function get_lastmsg() public returns (string memory) {
+        last_element_index = get_index();
+        return msgs[last_element_index];
+    }
+    
+}
+
+# Done by Nandini Agrawal
